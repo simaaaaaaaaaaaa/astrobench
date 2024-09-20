@@ -19,12 +19,17 @@ Citizen.CreateThread(function()
                         })
                         isMenuOpen = false
                     else
-                        print("Opening Repair Bench NUI")
-                        SetNuiFocus(true, true)
-                        SendNUIMessage({
-                            action = 'open'
-                        })
-                        isMenuOpen = true
+                        local vehicle = GetVehiclePedIsIn(playerPed, false)
+                        if vehicle ~= 0 then
+                            print("Opening Repair Bench NUI")
+                            SetNuiFocus(true, true)
+                            SendNUIMessage({
+                                action = 'open'
+                            })
+                            isMenuOpen = true
+                        else
+                            QBCore.Functions.Notify('You need to be in a vehicle to use the repair bench!', 'error')
+                        end
                     end
                 end
             end
@@ -48,11 +53,17 @@ end
 
 RegisterNetEvent('astrobench:openMenu', function()
     print("Received openMenu event")
-    SetNuiFocus(true, true)
-    SendNUIMessage({
-        action = 'open'
-    })
-    isMenuOpen = true
+    local playerPed = PlayerPedId()
+    local vehicle = GetVehiclePedIsIn(playerPed, false)
+    if vehicle ~= 0 then
+        SetNuiFocus(true, true)
+        SendNUIMessage({
+            action = 'open'
+        })
+        isMenuOpen = true
+    else
+        QBCore.Functions.Notify('You need to be in a vehicle to use the repair bench!', 'error')
+    end
 end)
 
 RegisterNUICallback('repairVehicle', function(data, cb)

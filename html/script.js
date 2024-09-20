@@ -121,5 +121,5 @@ function applyLivery() {
     console.log("Applying Livery:", currentLivery);
     setLivery(currentLivery);
 }
-// Initial display update
+
 updateDisplay();
