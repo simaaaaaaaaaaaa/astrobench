@@ -1,0 +1,54 @@
+.repair-bench {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9); /* Black and transparent */
+    border-radius: 20px; /* Rounded corners */
+    color: white;
+    position: absolute;
+    top: 10px; /* Position at the top */
+    right: 10px; /* Position at the right */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for modern look */
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans font */
+}
+
+.repair-bench button {
+    margin: 5px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Light white background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans font */
+}
+
+.repair-bench button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly darker on hover */
+}
+
+.repair-bench label {
+    margin-right: 10px;
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans font */
+    color: white; /* Light white lettering */
+}
+
+.repair-bench div {
+    margin: 10px 0;
+}
+
+.option-box {
+    background-color: rgba(255, 255, 255, 0.2); /* Light white box */
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for modern look */
+    color: white; /* Light white lettering */
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans font */
+}
